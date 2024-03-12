@@ -1,8 +1,8 @@
 import express from "express";
 import { envioCorreo } from "../controllers/correoController";
 
-const app: express.Application = express();
+const correoRoutes: express.Application = express();
 
-app.get("/envio", envioCorreo);
+correoRoutes.get("/envio", envioCorreo);
 
-export { app }
+export { correoRoutes }
