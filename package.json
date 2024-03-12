@@ -1,0 +1,30 @@
+{
+  "name": "backend_ts",
+  "version": "1.0.0",
+  "description": "backend on typescript",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/server.ts",
+    "dev": "set APP_ENV=development&& ts-node-dev  src/server.ts",
+    "prod": "set APP_ENV=production&& ts-node-dev  src/server.ts",
+    "stag": "set APP_ENV=staging&& ts-node-dev  src/server.ts",
+    "lint": "eslint src/*"
+  },
+  "author": "yuniel duarte",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "nodemailer": "^6.9.12",
+    "typescript": "5.4.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint": "^8.57.0",
+    "ts-node-dev": "^2.0.0"
+  }
+}
