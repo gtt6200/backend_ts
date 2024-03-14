@@ -1,8 +1,9 @@
+import { Request, Response } from 'express';
 import nodemailer from "nodemailer";
-import { validateEmail } from "./schemas/schemaCorreo";
+import { validateEmail } from "../schemas/schemaCorreo";
 import { Correo } from "../interfaces/correo.interface";
 
-const envioCorreo = async (req, res) => {
+const envioCorreo = async (req: Request, res: Response) => {
     try {
         const body: Correo = req.body;
         const result = validateEmail(body);
