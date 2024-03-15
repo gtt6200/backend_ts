@@ -33,7 +33,7 @@ loadContainer(app);
 
 //importo y hago uso de los controladores
 app.use(loadControllers(
-    '/src/controllers/*.ts',
+    'controllers/*.ts',
     { cwd: __dirname }
 ));
 
