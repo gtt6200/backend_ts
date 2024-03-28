@@ -1,2 +1,6 @@
 /node_modules
 /config/*.env
+/back_end/node_modules
+/back_end/config
+/node/02-bases/node_modules
+*.log

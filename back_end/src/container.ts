@@ -2,6 +2,8 @@ import express from 'express';
 import { createContainer, asClass } from "awilix";
 import { scopePerRequest } from "awilix-express";
 import { TestService } from './services/test.service';
+import { SubscriptionMySQLRespositoryService } from './services/repositories_services/implementation_services/mysql_repository_services/subsciption.repository.service';
+import { SubscriptionService } from './services/subscription.service';
 
 
 //recibe la lógica para registrar las dependencias
@@ -17,6 +19,11 @@ export default (app: express.Application) => {
         container.register({
             //la variable declarada del servicio de esta sección deberá ser el mismo que se vaya a usar en el constructor donde 
             //se vaya a utilizar la dependencia
+
+            //repositorios
+            _subscriptionRepositoryService: asClass(SubscriptionMySQLRespositoryService).scoped(),
+            //services
+            _subscriptionService: asClass(SubscriptionService).scoped(),
             _testService: asClass(TestService).scoped()
         });
 
