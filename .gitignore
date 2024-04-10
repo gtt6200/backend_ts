@@ -3,4 +3,5 @@
 /back_end/node_modules
 /back_end/config
 /node/02-bases/node_modules
+/node/03-typescript/node_modules
 *.log
